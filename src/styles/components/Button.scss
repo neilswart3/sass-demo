@@ -1,0 +1,20 @@
+@use '../partials/mixins/button';
+@use '../partials/variables/color';
+
+$btns: (
+  'default': color.$default,
+  'primary': color.$primary,
+  'secondary': color.$secondary,
+);
+
+.Button {
+  @include button.base;
+
+  @each $btn, $btn-color in $btns {
+    @include button.config($color: $btn-color);
+
+    &-#{$btn} {
+      @include button.color;
+    }
+  }
+}

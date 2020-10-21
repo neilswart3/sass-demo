@@ -1,0 +1,20 @@
+.Grid {
+  padding: 1.5rem 0;
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    margin: auto;
+  }
+
+  $-size: 1.04;
+  @for $i from 4 through 1 {
+    @if $i == 1 {
+      $size: 1;
+    }
+    &-#{$i} > * {
+      width: 100% / ($i * $-size);
+    }
+  }
+}

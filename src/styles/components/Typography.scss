@@ -1,0 +1,20 @@
+@use '../partials/variables/typography' as type;
+@use '../partials/variables/size';
+@use '../partials/variables/color';
+
+* {
+  font-family: type.$body;
+  font-size: size.$body;
+  color: color.$default;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+@for $i from 6 through 1 {
+  h#{$i} {
+    font-family: type.$heading;
+    font-size: size.$heading - ($i / 2) + rem;
+  }
+}

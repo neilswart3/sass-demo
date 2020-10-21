@@ -1,0 +1,23 @@
+@use '../partials/variables/color';
+
+.NavBar {
+  background: color.$background;
+  padding: 1.5rem;
+  font-size: 2rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  a {
+    color: color.$primary;
+    text-decoration: none;
+  }
+}
