@@ -4,7 +4,7 @@ $-color: #aaa !default;
 
 @mixin config($color: null) {
   @if $color {
-    $-color: $color;
+    $-color: $color !global;
   }
 }
 
