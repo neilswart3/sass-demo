@@ -10,8 +10,8 @@ const NavBar: React.FC = () => {
         <NavItem href='/placeholders' text='Placeholders' />
         <NavItem href='/ampersand' text='Ampersand' />
         <NavItem href='/lists-maps-loops' text='Lists Maps Loops' />
-        {/* <NavItem href='/at-rules' text='@rules' />
-        <NavItem href='/built-in-modules' text='Built In Modules' /> */}
+        <NavItem href='/built-in-modules' text='Built In Modules' />
+        {/* <NavItem href='/at-rules' text='@rules' /> */}
       </ul>
     </div>
   );

@@ -1,8 +1,17 @@
 @use "components/Grid";
-@use "components/Navbar";
 @use "components/Typography";
 @use "components/Button";
 @use "components/Editor";
+
+@use "components/List" with (
+  $color: blue,
+  $border: 2px solid,
+);
+
+@use "components/Navbar" with (
+  $background-color: blue,
+  $color: red,
+);
 
 * {
   margin: 0;

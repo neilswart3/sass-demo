@@ -7,7 +7,10 @@ const Placeholders: React.FC = () => {
     <>
       <Code input={`%button {
   border: 1px solid;
-  padding: 1.5rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .button-default {
@@ -30,7 +33,10 @@ const Placeholders: React.FC = () => {
 </Grid>
 <Code input={`@mixin button($color) {
   border: 1px solid;
-  padding: 1.5rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   color: $color;
 }
 
@@ -44,6 +50,28 @@ const Placeholders: React.FC = () => {
 
 .button-secondary {
   @include button(red);
+}
+`} />
+<Grid>
+  <h6>placeholders vs classes</h6>
+</Grid>
+<Code input={`.button-default {
+  border: 1px solid;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: gray;
+}
+
+.button-primary {
+  @extend .button-default;
+  color: blue;
+}
+
+.button-secondary {
+  @extend .button-default;
+  color: red;
 }
 `} />
     </>

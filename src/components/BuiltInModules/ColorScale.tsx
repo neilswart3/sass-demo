@@ -4,9 +4,7 @@ import FeatureSection from 'src/components/FeatureSection';
 const ColorScale: React.FC = () => {
   return (
     <FeatureSection
-      name='color.scale'
-      code={`
-@use 'sass:color';
+      code={ /* css */`@use 'sass:color';
 
 $primary-color: #2791fb;
 
@@ -20,6 +18,19 @@ $primary-color: #2791fb;
   color: $primary-color;
   border: 1px solid color.scale($primary-color, $lightness: -35%);
   background-color: darken($primary-color, 35%);
+}
+
+.button-complement {
+  color: color.complement($primary-color);
+}
+
+.button-adjust {
+  color: color.adjust($primary-color, $red: 221, $blue: -30);
+}
+
+.color-saturation {
+  color: $primary-color;
+  width: color.saturation($primary-color);
 }
         `}
     />

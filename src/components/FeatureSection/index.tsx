@@ -3,17 +3,17 @@ import Grid from 'src/components/Grid';
 import Code from 'src/components/Code';
 
 interface Props {
-  name: string;
+  name?: string;
   code: string;
 }
 
-const FeatureSection: React.FC<Props> = ({ name, code }) => {
+const FeatureSection: React.FC<Props> = ({ name = null, code }) => {
   return (
     <>
-      <Grid>
+      {name && <Grid>
         <h6>{name}</h6>
-      </Grid>
-      <Code input={code} />
+      </Grid>}
+      <Code height={700} input={code} />
     </>
   );
 };
