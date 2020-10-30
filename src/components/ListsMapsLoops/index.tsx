@@ -52,12 +52,16 @@ $icons2:
 
 
 
-$type: ('size': 16px, 'line-height': 1.25, 'weight': regular);
+$typeDefault: ('size': 16px, 'line-height': 1.25, 'weight': regular);
+$typeExtra: ('style': italic, 'font-family': 'Open Sans, sans-serif');
+$type: map.merge($typeDefault, $typeExtra);
 
 .class {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
       font-size: map.get($type, 'size');
+      font-style: map.get($type, 'style');
+      font-family: map.get($type, 'font-family');
     }
   }
 }
