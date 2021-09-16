@@ -3,8 +3,6 @@ import GeneralLayout from 'src/layouts/GeneralLayout';
 import Grid from 'src/components/Grid';
 import Button from 'src/components/Button';
 
-const types = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'];
-
 const IndexPage = () => (
   <GeneralLayout title='Index Page' sub='Index page content'>
     <Grid>
